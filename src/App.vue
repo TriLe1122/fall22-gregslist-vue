@@ -19,12 +19,18 @@
             </span>
           </button>
         </router-link>
+
+
         <br>
         <button class="btn">
-          <span class="text-success lighten-30 selectable text-uppercase">
-            Cars
-          </span>
+          <router-link :to="{name: 'Cars'}">
+            <span class="text-success lighten-30 selectable text-uppercase">
+              Cars
+            </span>
+          </router-link>
         </button>
+
+
         <br>
         <button class="btn">
           <span class="text-success lighten-30 selectable text-uppercase">

@@ -22,7 +22,7 @@
           <HouseCard :house="c.listing" :seller="c.seller" @deleteClassified="deleteClassified(c.id)" />
         </div>
 
-        tri
+
       </div>
     </div>
   </div>
