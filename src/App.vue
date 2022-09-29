@@ -32,18 +32,22 @@
 
 
         <br>
-        <button class="btn">
-          <span class="text-success lighten-30 selectable text-uppercase">
-            Jobs
-          </span>
-        </button>
-        <br>
-        <button class="btn">
-          <span class="text-success lighten-30 selectable text-uppercase">
-            Houses
-          </span>
-        </button>
+        <router-link :to="{name: 'Jobs'}">
+          <button class="btn">
+            <span class="text-success lighten-30 selectable text-uppercase">
+              Jobs
+            </span>
+          </button>
+        </router-link>
 
+        <br>
+        <router-link :to="{name: 'Houses'}">
+          <button class="btn">
+            <span class="text-success lighten-30 selectable text-uppercase">
+              Houses
+            </span>
+          </button>
+        </router-link>
 
       </div>
       <div class="col-md-10 main-content">
