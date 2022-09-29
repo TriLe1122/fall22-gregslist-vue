@@ -6,11 +6,11 @@
     </div>
 
     <div class="col-10 m-auto" v-if="classified.listingType == 'House'">
-      <CarCard :house="classified.listing" :seller="classified.seller" />
+      <HouseCard :house="classified.listing" :seller="classified.seller" />
     </div>
 
     <div class="col-10 m-auto" v-if="classified.listingType == 'Job'">
-      <CarCard :job="classified.listing" :seller="classified.seller" />
+      <JobCard :job="classified.listing" :seller="classified.seller" />
     </div>
 
 
@@ -30,6 +30,8 @@ import { AppState } from '../AppState.js';
 import CarCard from '../components/CarCard.vue';
 import { classifiedsService } from '../services/ClassifiedsService.js';
 import Pop from '../utils/Pop.js';
+import HouseCard from "../components/HouseCard.vue";
+import JobCard from "../components/JobCard.vue";
 
 export default {
   setup() {
@@ -51,6 +53,6 @@ export default {
       classified: computed(() => AppState.activeClassified)
     };
   },
-  components: { CarCard }
+  components: { CarCard, HouseCard, JobCard }
 }
 </script>
