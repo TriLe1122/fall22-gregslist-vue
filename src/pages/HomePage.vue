@@ -2,6 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-3 col-md-4 my-3" v-for="c in classifieds" :key="c.id">
+
         <div v-if="c.listingType == 'Car'">
           <router-link :to="{
             name: 'Details',
@@ -12,6 +13,16 @@
             <CarCard :car="c.listing" :seller="c.seller" @deleteClassified="deleteClassified(c.id)" />
           </router-link>
         </div>
+
+        <div v-if="c.listingType == 'Job'">
+          <JobCard :job="c.listing" :seller="c.seller" @deleteClassified="deleteClassified(c.id)" />
+        </div>
+
+        <div v-if="c.listingType == 'House'">
+          <HouseCard :house="c.listing" :seller="c.seller" @deleteClassified="deleteClassified(c.id)" />
+        </div>
+
+        tri
       </div>
     </div>
   </div>

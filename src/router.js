@@ -11,6 +11,28 @@ const routes = [
     name: 'Home',
     component: loadPage('HomePage')
   },
+
+
+  {
+    path: '/houses',
+    name: 'Houses',
+    component: loadPage('HousesPage')
+  },
+  {
+    path: '/cars',
+    name: 'Cars',
+    component: loadPage('HomePage')
+  },
+  {
+    path: '/jobs',
+    name: 'Jobs',
+    component: loadPage('JobsPage')
+  },
+
+
+
+
+
   {
     //                   v Magic String bananaWord
     path: '/classifieds/:id',

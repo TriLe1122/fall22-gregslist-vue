@@ -2,14 +2,23 @@
   <div class="details" v-if="classified">
 
     <div class="col-10 m-auto" v-if="classified.listingType == 'Car'">
-
       <CarCard :car="classified.listing" :seller="classified.seller" />
     </div>
+
+    <div class="col-10 m-auto" v-if="classified.listingType == 'House'">
+      <CarCard :house="classified.listing" :seller="classified.seller" />
+    </div>
+
+    <div class="col-10 m-auto" v-if="classified.listingType == 'Job'">
+      <CarCard :job="classified.listing" :seller="classified.seller" />
+    </div>
+
+
     <div>{{classified.listingType}}</div>
 
   </div>
   <div v-else>
-    loading...
+    loading...howdy
   </div>
 </template>
 

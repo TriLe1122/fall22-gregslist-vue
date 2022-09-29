@@ -9,6 +9,35 @@
             Add a Listing
           </span>
         </button>
+        <br>
+
+        <router-link :to="{
+        name: 'Home',}">
+          <button class="btn">
+            <span class="text-success lighten-30 selectable text-uppercase">
+              Home
+            </span>
+          </button>
+        </router-link>
+        <br>
+        <button class="btn">
+          <span class="text-success lighten-30 selectable text-uppercase">
+            Cars
+          </span>
+        </button>
+        <br>
+        <button class="btn">
+          <span class="text-success lighten-30 selectable text-uppercase">
+            Jobs
+          </span>
+        </button>
+        <br>
+        <button class="btn">
+          <span class="text-success lighten-30 selectable text-uppercase">
+            Houses
+          </span>
+        </button>
+
 
       </div>
       <div class="col-md-10 main-content">
@@ -28,6 +57,10 @@
       <ClassifiedForm />
     </div>
   </div>
+
+
+
+
 </template>
 
 <script>
@@ -37,11 +70,15 @@ import ClassifiedForm from './components/ClassifiedForm.vue'
 import Login from './components/Login.vue'
 import Navbar from './components/Navbar.vue'
 
+
 export default {
   setup() {
     return {
       appState: computed(() => AppState),
-      account: computed(() => AppState.account)
+      account: computed(() => AppState.account),
+      cars: computed(() => AppState.cars),
+      jobs: computed(() => AppState.jobs),
+      houses: computed(() => AppState.houses),
     }
   },
   components: { Navbar, Login, ClassifiedForm }
