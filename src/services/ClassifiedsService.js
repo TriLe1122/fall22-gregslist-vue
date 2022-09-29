@@ -29,6 +29,15 @@ class ClassifiedsService {
     // AppState.classifieds = [...AppState.classifieds, new Classified(res.data)]
   }
 
+  async getClassifiedByListingType(type) {
+    const res = await SandboxApi.get(`/api/classifieds/`, {
+      params: {
+        listingType: type
+      }
+    })
+    AppState.classifieds = res.data.map((c) => new Classified(c))
+  }
+
 
 }
 

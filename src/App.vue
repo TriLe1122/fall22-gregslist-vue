@@ -22,13 +22,13 @@
 
 
         <br>
-        <button class="btn">
-          <router-link :to="{name: 'Cars'}">
+        <router-link :to="{name: 'Cars'}">
+          <button class="btn">
             <span class="text-success lighten-30 selectable text-uppercase">
               Cars
             </span>
-          </router-link>
-        </button>
+          </button>
+        </router-link>
 
 
         <br>
