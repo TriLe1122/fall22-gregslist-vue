@@ -13,7 +13,7 @@
             <HouseCard :house="c.listing" :seller="c.seller" @deleteClassified="deleteClassified(c.id)" />
           </router-link>
         </div>
-        <div></div>
+
       </div>
     </div>
   </div>
