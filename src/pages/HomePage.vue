@@ -37,7 +37,7 @@
           </router-link>
         </div>
 
-        tri
+
       </div>
     </div>
   </div>
